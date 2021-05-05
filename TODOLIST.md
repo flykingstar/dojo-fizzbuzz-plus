@@ -1,0 +1,10 @@
+- [x] step1: in 3 out fizz 
+- [x] step2: in 5 out buzz 
+- [x] step3: in 15 out fizzbuzz
+- [x] step4: in 7 out 7
+- [x] step5: in 13 out fizz
+- [x] step6: in 52 out buzz
+- [x] step7: in 35 out fizzbuzz
+- [x] step8: in 51 out fizzbuzz
+- [x] step9: in 530 out fizzbuzz
+- [ ] step9: println 100 numbers
