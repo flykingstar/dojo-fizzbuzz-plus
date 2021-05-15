@@ -1,6 +1,5 @@
 package com.flykingstar.dojo.fizzbuzz.plus;
 
-import org.assertj.core.api.AbstractStringAssert;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -55,9 +54,8 @@ class FizzBuzzTests {
     }
 
 
-
-    private AbstractStringAssert<?> assertNumber(Integer number, String expect) {
-        return assertThat(Calculator.of(number)).isEqualTo(expect);
+    private void assertNumber(Integer number, String expect) {
+        assertThat(Calculator.of(number)).isEqualTo(expect);
     }
 
 }

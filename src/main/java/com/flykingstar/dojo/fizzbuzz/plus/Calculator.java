@@ -6,44 +6,25 @@ package com.flykingstar.dojo.fizzbuzz.plus;
  */
 public class Calculator {
     public static String of(int number) {
-        if(containOrDivideByFive(number) && containOrDivideByThree(number)){
-            return "fizzbuzz";
+        StringBuilder sb = new StringBuilder();
+        if (containOrDivideByNumber(number, 3)) {
+            sb.append("fizz");
         }
-        if (containOrDivideByThree(number)) {
-            return "fizz";
+        if (containOrDivideByNumber(number, 5)) {
+            sb.append("buzz");
         }
-        if (containOrDivideByFive(number)) {
-            return "buzz";
+        if (sb.length() == 0) {
+            return String.valueOf(number);
         }
-        return number + "";
+        return sb.toString();
     }
 
-    private static boolean containOrDivideByThree(int number) {
-        return divideByThree(number) || containsByThree(number);
-    }
-
-    private static boolean containOrDivideByFive(int number) {
-        return divideByFive(number) || containsByFive(number);
-    }
-
-    private static boolean containsByFive(int number) {
-        return containsNumber(number, "5");
+    private static boolean containOrDivideByNumber(int number, int operateNumber) {
+        return divideByNumber(number, operateNumber) || containsNumber(number, String.valueOf(operateNumber));
     }
 
     private static boolean containsNumber(int number, String s) {
         return (number + "").contains(s);
-    }
-
-    private static boolean containsByThree(int number) {
-        return containsNumber(number, "3");
-    }
-
-    private static boolean divideByThree(int number) {
-        return divideByNumber(number, 3);
-    }
-
-    private static boolean divideByFive(int number) {
-        return divideByNumber(number, 5);
     }
 
     private static boolean divideByNumber(int number, int divisor) {
