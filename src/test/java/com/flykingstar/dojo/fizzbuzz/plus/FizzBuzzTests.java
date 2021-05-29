@@ -5,7 +5,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class FizzBuzzTest {
+class FizzBuzzTests {
 
     @ParameterizedTest(name = "when given {0} should return {1}")
     @CsvSource({
